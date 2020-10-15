@@ -1,0 +1,22 @@
+<div class="navbar">
+
+    <p class="guild-name" routerLink="/stats/server" (click)="onClick('server')">{{guildName}}</p>
+    <img class="guild-icon" [src]="guildIconURL" alt="server icon">
+
+    <p class="guild-available">Available dashboards</p>
+    <div class="guild-item-container">
+        <div *ngFor="let dashboard of dashboards">
+
+            <div *ngIf="selectedDashboard === dashboard.toLowerCase(); else elseDisplay">
+                <button class="guild-item-selected" routerLink="/stats/{{dashboard | lowercase | removeSpace}}" (click)="onClick(dashboard)">{{dashboard}}</button>
+            </div>
+            <ng-template #elseDisplay>
+                <button class="guild-item" routerLink="/stats/{{dashboard | lowercase | removeSpace}}" (click)="onClick(dashboard)">{{dashboard}}</button>
+            </ng-template>
+
+        </div>
+    </div>
+
+    <button class="guild-back" routerLink="">take me back</button>
+
+</div>

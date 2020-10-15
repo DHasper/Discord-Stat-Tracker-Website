@@ -1,0 +1,151 @@
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    /* background-color: red; */
+    width: 72vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timebar-container {
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(41, 43, 47, 1);
+    width: initial;
+    height: 3vh;
+    border-radius: 0.5em;
+    position: relative;
+    padding: 0.5em;
+    /* display: flex; */
+}
+
+.timebar-elements {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timebar-time {
+    background-color: rgb(47, 49, 54);
+    text-align: center;
+    border: 0;
+    color: rgba(185, 187, 190, 1);
+    height: 3vh;
+    width: fit-content;
+}
+
+.timebar-time:hover {
+    background-color: rgba(174, 81, 104, 0.3);
+}
+
+.timebar-time:focus {
+    outline: none;
+}
+
+.timebar-time#selected {
+    background-color: rgb(174, 81, 104);
+}
+
+.timebar-undertext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.75em;
+    color: rgba(185, 187, 190, 1);
+    margin-left: 0.3vw;
+    position: absolute;
+    margin-top: 0.65vh;
+}
+
+.information-container {
+    background-color: rgb(41, 43, 47);
+    width: 22vw;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-left: 4vw;
+    height: 23vh;
+}
+
+.information-text {
+    /* font-size: 1.2em; */
+    font-family: Verdana, sans-serif;
+    margin: 0.75em;
+    color: rgba(185, 187, 190, 1);
+    display: flex;
+    font-size: 1vw;
+}
+
+.information-answer {
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    margin-left: 13vw;
+    font-size: 1vw;
+}
+
+.smallchart-container {
+    /* float: right; */
+    background-color: rgb(41, 43, 47);
+    border-radius: 0.5em;
+    /* padding: 0.5em; */
+    width: 23.5vw;
+    height: 25.5vh;
+    /* margin-left: .5vw;
+    margin-right: .5vw; */
+}
+
+.smallchart-container#left {
+    margin-right: 0.75vw;
+}
+
+.smallchart-container#right {
+    margin-left: 0.75vw;
+}
+
+.informationchart-container {
+    display: flex;
+    margin-top: 0.5vw;
+    width: initial;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chart {
+    position: relative;
+    height: 50vh;
+    /* width: 10vw; */
+}
+
+.smallchart {
+    margin-top: 0.5vh;
+    height: 25vh;
+}
+
+.smallchart#pie {
+    height: 24vh;
+}
+
+.chart-container {
+    position: relative;
+    width: initial;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(41, 43, 47);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-top: 3vh;
+}
+
+.chart-title {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    position: relative; 
+    text-align: center;
+    font-size: 2em;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}

@@ -1,0 +1,25 @@
+<div class="background" [ngStyle]="backgroundGradient"></div>
+
+<div class="wrapper">
+
+    <img class="logo" src='assets/home-logo.png' alt="discord data tracker">
+
+    <div class="access-box">
+
+        <p class="access-title">ENTER ACCESS CODE</p>
+
+        <form [formGroup]="accessForm" class="access-input-box">
+            <input class="access-input" type="text" formControlName="accessCode">
+            <button class="access-button" (click)="onSubmit()">
+                <img class="access-button-img" src="assets/next.png" alt="go to this server's stat tracker dashboard">
+            </button>
+        </form>
+
+        <div *ngIf="errorMessage != null" class="error">
+            {{errorMessage}}
+        </div>
+
+    </div>
+    
+    <app-footer></app-footer>
+</div>

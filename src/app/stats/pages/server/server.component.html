@@ -1,0 +1,87 @@
+<div class="wrapper">
+
+    <div class="timebar-container">
+
+        <div *ngIf="totalDays == 1; else elseTime">
+            <div class="timebar-undertext">showing data over the last 24 hours</div>
+        </div>
+        <ng-template #elseTime>
+            <div class="timebar-undertext">showing data over the last {{totalDays}} days</div>
+        </ng-template>   
+
+        <div class="timebar-elements">
+            <div *ngFor="let time of selectableTimes">
+                <div *ngIf="selectedTime === time; else elseSelectedTime">
+                    <button class="timebar-time" id="selected">{{time}}</button>
+                </div>
+                <ng-template #elseSelectedTime>
+                    <button class="timebar-time"(click)="timeClick(time)">{{time}}</button>
+                </ng-template>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="informationchart-container">
+        <div class="smallchart-container" id="left">
+                <div class="information-text">Messages: <div class="information-answer">{{totalMessages}}</div></div>
+                <div class="information-text">Memes: <div class="information-answer">{{totalMemes}}</div></div>
+                <div class="information-text">Messages with files: <div class="information-answer">{{totalFiles}}</div></div>
+                <div class="information-text">First message: <div class="information-answer">{{earliestDate}}</div></div>
+        </div>
+
+        <div class="smallchart-container" id="middle">
+            <div>
+                <canvas class="smallchart"
+                baseChart
+                chartType="line"
+                [datasets]="msgData"
+                [labels]="msgLabels"
+                [legend]=true
+                [options]="msgPerHourOptions">
+                </canvas>
+            </div>
+        </div>
+    
+        <div class="smallchart-container" id="right">
+            <div>
+                <canvas class="smallchart" id="pie"
+                baseChart
+                chartType="pie"
+                [data]="msgmemeData"
+                [colors]="msgmemeColors"
+                [options]="msgmemeOptions"
+                [labels]="msgmemeLabels">
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Amount of messages sent in channel</div>
+        <div>
+            <canvas class="chart"
+            baseChart
+            chartType="bar"
+            [datasets]="channelData"
+            [labels]="channelLabels"
+            [colors]="msgPerHourColors"
+            [options]="msgPerHourOptions">
+            </canvas>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart-title">Average amount of messages sent per hour</div>
+        <div>
+            <canvas class="chart"
+            baseChart
+            chartType="bar"
+            [datasets]="msgPerHourData"
+            [labels]="msgPerHourLabels"
+            [options]="msgPerHourOptions">
+            </canvas>
+        </div>
+    </div>
+
+</div>

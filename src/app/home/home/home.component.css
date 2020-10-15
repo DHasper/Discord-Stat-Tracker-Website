@@ -1,0 +1,98 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.wrapper {
+    width: 70vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    height: auto;
+    max-width: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+.access-box {
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+}
+
+.access-title {
+    color: white;
+    font-size: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.access-input {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    font-size: 3.5vh;
+    border: 0;
+    float:left;
+}
+
+.access-input:focus {
+    outline: none;
+}
+
+.access-button {
+    box-sizing: border-box;
+    float: right;
+    border: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(185, 187, 190);
+}
+
+.access-button-img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+.access-input-box {
+    width: 100%;
+    height: 5vh;
+    background-color: red;
+    display: flex;
+}
+
+.error {
+    background-color: rgb(255, 51, 51);
+    color: white;
+    font-size: 100%;
+    padding: 1vh;
+    margin-top: 3vh;
+    opacity: 0.9;
+    border: 1px solid white;
+    border-radius: 0.5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

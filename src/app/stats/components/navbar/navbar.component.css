@@ -1,0 +1,110 @@
+.navbar {
+    position: fixed;
+    background-color: rgb(41, 43, 47);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-right: 10px solid rgb(47, 49, 54);
+}
+
+.guild-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.guild-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+    border-radius: 50%;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+.guild-available {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    text-align: center;
+    font-size: 1.25em;
+    width: 80%;
+    border-top: 3px solid rgb(54, 57, 63)
+}
+
+.guild-back {
+    position: fixed;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+    bottom: 0%;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+.guild-item-selected {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 1vh;
+    outline: none;
+    -webkit-animation: button-focus 0.0s forwards;
+}
+
+.guild-item {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 1vh;
+    outline: none;
+    -webkit-animation: button-focus-lost 0.4s;
+}
+
+.guild-item:hover {
+    -webkit-animation: button-focus 0.4s forwards;
+    color: white;
+}
+
+.guild-item-container {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    padding-bottom: 1vh;
+    width: 80%;
+    border-bottom: 3px solid rgb(54, 57, 63)
+}
+
+@keyframes button-focus {
+    0% {
+        border-right: solid transparent 0px;
+    }
+    100% {
+        border-right: solid rgb(174, 81, 104) 12px;
+    }
+}
+
+@keyframes button-focus-lost {
+    0% {
+        border-right: solid rgb(174, 81, 104) 12px;
+    }
+    100% {
+        border-bottom: solid transparent 0px;
+    }
+}

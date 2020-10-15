@@ -1,0 +1,14 @@
+
+.wrapper {
+    min-height: 98vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.content {
+    padding-bottom: 7vh;
+}
+
+.footer {
+    
+}
